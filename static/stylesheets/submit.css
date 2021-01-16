@@ -1,0 +1,33 @@
+.navbar-item{
+  text-decoration: none;
+  font-size: 30px;
+  color: white;
+}
+
+.navbar-header{
+  text-decoration: none;
+  font-size: 45px;
+  color: white;
+  font-weight: bold;
+}
+
+hr{
+  background-color: white;
+}
+
+.choice{
+  top:50%;
+  left: 50%;
+}
+
+.enter-note{
+  width: 400px;
+   height: 400px;
+   background-color:#f7f794;
+   position:absolute;
+   top:65%;
+   left:50%;
+   margin-left:-200px;/* half width*/
+   margin-top:-200px;/* half height*/
+   box-shadow: 5px 10px;
+}

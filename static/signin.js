@@ -5,7 +5,8 @@ function signIn(){
 
   firebase.auth().signInWithEmailAndPassword(email, password)
   .then((user) => {
-    console.log(user);
+
+    console.log(user['uid']);
     location.href = '/profile';
   })
   .catch((error) => {

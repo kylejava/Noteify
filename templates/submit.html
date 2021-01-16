@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet"href="{{ url_for('static', filename='stylesheets/signup.css') }}">
+    <link rel="stylesheet"href="{{ url_for('static', filename='stylesheets/submit.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <title>Note.ify</title>
   </head>
@@ -29,32 +29,34 @@
       </header>
       <hr>
     </div>
-    <div class="rectangle">
-      <div class="container py-5 text-center">
-        <h1>Register</h1>
-        <div class="py-2">
-          <input type="text" id="displayName"placeholder="First & Last Name" class="form-control" >
-        </div>
-        <div class="py-2">
-          <input type="text" id = "email" placeholder="Email Address" class="form-control" id="exampleInputPassword1">
-        </div>
-        <div class="py-2">
-          <input type="password" id = "password" placeholder="Password" class="form-control" id="exampleInputPassword1">
-        </div>
-        <input type="submit" onclick="createUser()"value="Sign Up!">
-        <p id= "note"></p>
-        <div class="text-center py-3">
-          <p>Already Have An Account?</p>
-          <a href="/signin">Sign In!</a>
-        </div>
+    <h1 class="text-center">Submit A note</h1>
+    <div class="container text-center">
+      <div class="enter-note text-center ">
+        <br>
+        <br>
+        <textarea name="name" rows="12" cols="40" placeholder="Set A Positive Note For Yourself ..."></textarea>
       </div>
+      <div class="container pt-3">
+        <label for="jars">Put Note In Which Jar?</label>
+        <select name="jars" id="jars">
+          <option value="jar1">Open When You're Not Feeling like You're Not Good Enough</option>
+          <option value="jar2">Open When You're Going Through A Rough Patch</option>
+          <option value="jar3">Open When You Need A Good Laugh</option>
+          <option value="jar4">Open When You Are Feeling Lonely</option>
+          <option value="jar5">Open When You Are Feeling Anxious</option>
+        </select>
+        <input onclick="submitToDatabase()"type="submit" value="Submit">
+      </div>
+
     </div>
+
+
+
     <!-- Add These To all HTMl Files -->
     <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-database.js"></script>
     <script src="../static/firebase.js"></script>
-    <script src="../static/signup.js"></script>
   </body>
 </html>

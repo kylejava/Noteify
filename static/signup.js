@@ -1,26 +1,21 @@
+var database = firebase.database();
+
 function createUser() {
   var email = document.getElementById('email').value;
   var password = document.getElementById('password').value;
   var display = document.getElementById('displayName').value;
   firebase.auth().createUserWithEmailAndPassword(email, password)
   .then((user) => {
-    user.updateProfile({
-      displayName: display,
-    }).then(function() {
-      // Update successful.
-    }).catch(function(error) {
-      // An error happened.
+    firebase.database().ref('users/' + display).set({
+      username:display,
+      email: email
     });
-    if (user.displayName != null) {
-      location.href ='/signin';
-    }
-  })
+    location.href = "/signin";
   .catch((error) => {
     var errorCode = error.code;
     var errorMessage = error.message;
     // ..
     console.log(errorMessage);
-    console.log(user);
   //  console.log(user.isEmailVerified());
   });
 }

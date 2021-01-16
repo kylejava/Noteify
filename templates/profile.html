@@ -70,7 +70,7 @@
       firebase.auth().onAuthStateChanged(function(user) {
       if (user) {
         console.log(user);
-        document.getElementById('displayName').innerHTML = user.displayName;
+        console.log(user.uid);
       } else {
         console.log("user is note signed in");
       }

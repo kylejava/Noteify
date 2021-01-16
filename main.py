@@ -19,6 +19,10 @@ def signup():
 def profile():
     return render_template('profile.html')
 
+@app.route('/submit' , methods = ['GET' , 'POST'])
+def submit():
+    return render_template('submit.html')
+
 
 if __name__ == "__main__":
     app.run(debug=True)
