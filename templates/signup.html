@@ -41,7 +41,7 @@
         <div class="py-2">
           <input type="password" id = "password" placeholder="Password" class="form-control" id="exampleInputPassword1">
         </div>
-        <input type="submit" onclick="createUser()"value="Sign Up!">
+        <input type="submit" onclick="createNewUser()"value="Sign Up!">
         <p id= "note"></p>
         <div class="text-center py-3">
           <p>Already Have An Account?</p>
@@ -49,12 +49,13 @@
         </div>
       </div>
     </div>
+
     <!-- Add These To all HTMl Files -->
     <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-database.js"></script>
-    <script src="../static/firebase.js"></script>
+    <script  type="text/javascript" src="../static/firebase.js"></script>
     <script src="../static/signup.js"></script>
   </body>
 </html>

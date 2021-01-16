@@ -71,6 +71,14 @@
       if (user) {
         console.log(user);
         console.log(user.uid);
+        firebase.database().ref('users/' + user.uid).set({
+          email: user.email,
+          OpenWhenYouFeelLikeYoureNotGoodEnough: ["Yuh"],
+          OpenWhenYoureGoingThroughARoughPatch: ["test"],
+          OpenWhenYouNeedAGoodLaugh: ["Test"],
+          OpenWhenYouAreFeelingLonely: ["test"],
+          OpenWhenYouAreFeelingAnxious: ['test']
+        });
       } else {
         console.log("user is note signed in");
       }

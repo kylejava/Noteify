@@ -1,6 +1,10 @@
 var database = firebase.database();
 
-function createUser() {
+function test(){
+  console.log("test");
+}
+
+function createNewUser() {
   var email = document.getElementById('email').value;
   var password = document.getElementById('password').value;
   var display = document.getElementById('displayName').value;
@@ -8,9 +12,11 @@ function createUser() {
   .then((user) => {
     firebase.database().ref('users/' + display).set({
       username:display,
-      email: email
+      email: email,
+      OpenWhenYouFeelLikeYoureNotGoodEnough: [],
     });
-    location.href = "/signin";
+    document.getElementById('note').innerHTML = "Account Has Been Created.";
+  })
   .catch((error) => {
     var errorCode = error.code;
     var errorMessage = error.message;
