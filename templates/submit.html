@@ -34,18 +34,18 @@
       <div class="enter-note text-center ">
         <br>
         <br>
-        <textarea name="name" rows="12" cols="40" placeholder="Set A Positive Note For Yourself ..."></textarea>
+        <textarea id="note" name="name" rows="12" cols="40" placeholder="Set A Positive Note For Yourself ..."></textarea>
       </div>
       <div class="container pt-3">
         <label for="jars">Put Note In Which Jar?</label>
         <select name="jars" id="jars">
-          <option value="jar1">Open When You're Not Feeling like You're Not Good Enough</option>
-          <option value="jar2">Open When You're Going Through A Rough Patch</option>
-          <option value="jar3">Open When You Need A Good Laugh</option>
-          <option value="jar4">Open When You Are Feeling Lonely</option>
-          <option value="jar5">Open When You Are Feeling Anxious</option>
+          <option value="OpenWhenYouFeelLikeYoureNotGoodEnough">Open When You're Not Feeling like You're Not Good Enough</option>
+          <option value="OpenWhenYoureGoingThroughARoughPatch">Open When You're Going Through A Rough Patch</option>
+          <option value="OpenWhenYouNeedAGoodLaugh">Open When You Need A Good Laugh</option>
+          <option value="OpenWhenYouAreFeelingLonely">Open When You Are Feeling Lonely</option>
+          <option value="OpenWhenYouAreFeelingAnxious">Open When You Are Feeling Anxious</option>
         </select>
-        <input onclick="submitToDatabase()"type="submit" value="Submit">
+        <input onclick="addEntryToJar()"type="submit" value="Submit">
       </div>
 
     </div>
@@ -58,5 +58,6 @@
     <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-database.js"></script>
     <script src="../static/firebase.js"></script>
+    <script src="../static/database.js"></script>
   </body>
 </html>

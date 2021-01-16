@@ -68,21 +68,14 @@
     <script src="../static/firebase.js"></script>
     <script type="text/javascript">
       firebase.auth().onAuthStateChanged(function(user) {
-      if (user) {
-        console.log(user);
-        console.log(user.uid);
-        firebase.database().ref('users/' + user.uid).set({
-          email: user.email,
-          OpenWhenYouFeelLikeYoureNotGoodEnough: ["Yuh"],
-          OpenWhenYoureGoingThroughARoughPatch: ["test"],
-          OpenWhenYouNeedAGoodLaugh: ["Test"],
-          OpenWhenYouAreFeelingLonely: ["test"],
-          OpenWhenYouAreFeelingAnxious: ['test']
-        });
-      } else {
-        console.log("user is note signed in");
-      }
-    });
+        if (user) {
+          console.log(user);
+          console.log(user.uid);
+          
+        } else {
+          console.log("user is note signed in");
+        }
+      });
     </script>
   </body>
 </html>
