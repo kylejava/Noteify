@@ -15,9 +15,22 @@ hr{
   background-color: white;
 }
 
+
+
 .entry{
   width: 340px;
   height: 418px;
-  background-color: white;
+  background-color: #f7f794;
   border-radius: 20px;
+  box-shadow: 5px 10px;
+
+}
+
+.content{
+  display: inline-block;
+ width: 200px; height: 200px;
+}
+
+img:hover{
+  opacity: .5;
 }
