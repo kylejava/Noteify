@@ -14,3 +14,4 @@ function signIn(){
     console.log(errorMessage);
     document.getElementById('error').innerHTML = errorMessage;
   });
+}

@@ -15,5 +15,10 @@ def signin():
 def signup():
     return render_template('signup.html')
 
+@app.route('/profile' , methods = ['GET' , 'POST'])
+def profile():
+    return render_template('profile.html')
+
+
 if __name__ == "__main__":
     app.run(debug=True)

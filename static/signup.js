@@ -1,10 +1,19 @@
 function createUser() {
   var email = document.getElementById('email').value;
   var password = document.getElementById('password').value;
+  var display = document.getElementById('displayName').value;
   firebase.auth().createUserWithEmailAndPassword(email, password)
   .then((user) => {
-    console.log("user");
-    location.href = '/signin';
+    user.updateProfile({
+      displayName: display,
+    }).then(function() {
+      // Update successful.
+    }).catch(function(error) {
+      // An error happened.
+    });
+    if (user.displayName != null) {
+      location.href ='/signin';
+    }
   })
   .catch((error) => {
     var errorCode = error.code;

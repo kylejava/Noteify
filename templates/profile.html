@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet"href="{{ url_for('static', filename='stylesheets/signin.css') }}">
+    <link rel="stylesheet"href="{{ url_for('static', filename='stylesheets/profile.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <title>Note.ify</title>
   </head>
@@ -29,22 +29,7 @@
       </header>
       <hr>
     </div>
-    <div class="rectangle">
-      <div class="container py-5 text-center">
-        <h1>Sign In</h1>
-        <div class="py-3">
-          <input type="text" id = "email" placeholder="Email Address" class="form-control" id="exampleInputPassword1">
-        </div>
-        <div class="py-3">
-          <input type="password" id = "password" placeholder="Password" class="form-control" id="exampleInputPassword1">
-        </div>
-        <input type="submit" onclick = "signIn()"value="Sign In!">
-        <div class="text-center py-5">
-          <p>Dont Have An Account?</p>
-          <a href="/signup">Create One Here!</a>
-        </div>
-      </div>
-    </div>
+    <p id = "displayName"></p>
 
     <!-- Add These To all HTMl Files -->
     <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
@@ -52,6 +37,15 @@
     <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-database.js"></script>
     <script src="../static/firebase.js"></script>
-    <script src="../static/signin.js"></script>
+    <script type="text/javascript">
+      firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        console.log(user);
+        document.getElementById('displayName').innerHTML = user.displayName;
+      } else {
+        console.log("user is note signed in");
+      }
+    });
+    </script>
   </body>
 </html>
