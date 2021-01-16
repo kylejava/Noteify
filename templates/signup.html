@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet"href="{{ url_for('static', filename='stylesheets/signin.css') }}">
+    <link rel="stylesheet"href="{{ url_for('static', filename='stylesheets/signup.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <title>Note.ify</title>
   </head>
@@ -29,41 +29,31 @@
       </header>
       <hr>
     </div>
-    <div class="container-sm">
-      <div class="container text-center py-5">
-        <h1 >Sign In</h1>
-      </div>
-      <form>
-        <div class="mb-3 container">
-          <input type="input" id = "email" placeholder="Email Address"class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-
+    <div class="rectangle">
+      <div class="container py-5 text-center">
+        <h1>Register</h1>
+        <div class="py-2">
+          <input type="text" id = "email" placeholder="Email Address" class="form-control" id="exampleInputPassword1">
         </div>
-        <div class="mb-3 container">
+        <div class="py-2">
           <input type="password" id = "password" placeholder="Password" class="form-control" id="exampleInputPassword1">
         </div>
-        <p id="error"></p>
-        <a onclick = "consolge.log("hello world");">
-          <div class="rectangle ps-5">
-            <h1>Sign In</h1>
-          </div>
-        </a>
-        <div class="container py-5">
-          <p>Already Have An Account?</p>
-          <a href="/signin">Sign In</a>
+        <div class="py-2">
+          <input type="password" placeholder="Password" class="form-control" id="exampleInputPassword1">
         </div>
-      </form>
+        <input type="submit" onclick="createUser()"value="Sign Up!">
+        <div class="text-center py-3">
+          <p>Already Have An Account?</p>
+          <a href="/signin">Sign In!</a>
+        </div>
+      </div>
     </div>
-    <script type="text/javascript">
-      document.getElementById('email').style.height="75px";
-      document.getElementById('email').style.fontSize="25pt";
-      document.getElementById('password').style.height="75px";
-      document.getElementById('password').style.fontSize="25pt";
-    </script>
     <!-- Add These To all HTMl Files -->
     <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-database.js"></script>
     <script src="../static/firebase.js"></script>
+    <script src="../static/signup.js"></script>
   </body>
 </html>

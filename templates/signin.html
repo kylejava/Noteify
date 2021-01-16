@@ -29,41 +29,29 @@
       </header>
       <hr>
     </div>
-    <div class="container-sm">
-      <div class="container text-center py-5">
-        <h1 >Sign In</h1>
-      </div>
-      <form>
-        <div class="mb-3 container">
-          <input type="input" id = "email" placeholder="Email Address"class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-
+    <div class="rectangle">
+      <div class="container py-5 text-center">
+        <h1>Sign In</h1>
+        <div class="py-3">
+          <input type="text" id = "email" placeholder="Email Address" class="form-control" id="exampleInputPassword1">
         </div>
-        <div class="mb-3 container">
+        <div class="py-3">
           <input type="password" id = "password" placeholder="Password" class="form-control" id="exampleInputPassword1">
         </div>
-        <p id="error"></p>
-        <a onclick = "consolge.log("hello world");">
-          <div class="rectangle ps-5">
-            <h1>Sign In</h1>
-          </div>
-        </a>
-        <div class="container py-5">
+        <input type="submit" onclick = "signin()"value="Sign In!">
+        <div class="text-center py-5">
           <p>Dont Have An Account?</p>
-          <a href="/signup">Create An Account</a>
+          <a href="/signup">Create One Here!</a>
         </div>
-      </form>
+      </div>
     </div>
-    <script type="text/javascript">
-      document.getElementById('email').style.height="75px";
-      document.getElementById('email').style.fontSize="25pt";
-      document.getElementById('password').style.height="75px";
-      document.getElementById('password').style.fontSize="25pt";
-    </script>
+
     <!-- Add These To all HTMl Files -->
     <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-database.js"></script>
     <script src="../static/firebase.js"></script>
+    <script src="../static/signin.js"></script>
   </body>
 </html>
