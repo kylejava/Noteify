@@ -14,3 +14,10 @@
 hr{
   background-color: white;
 }
+
+.entry{
+  width: 340px;
+  height: 418px;
+  background-color: white;
+  border-radius: 20px;
+}
