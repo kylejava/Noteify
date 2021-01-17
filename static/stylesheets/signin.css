@@ -34,3 +34,7 @@ input[type=submit]{
   background-color: #8a9ea7;
 
 }
+@font-face{
+  font-family: Shadows;
+  src: url(../Shadows.ttf);
+}

@@ -34,3 +34,8 @@ hr{
 img:hover{
   opacity: .5;
 }
+
+@font-face{
+  font-family: Shadows;
+  src: url(../Shadows.ttf);
+}

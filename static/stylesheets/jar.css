@@ -1,3 +1,13 @@
+@font-face{
+  font-family: Shadows;
+  src: url(../Shadows.ttf);
+}
+
+#note{
+  font-family: Shadows;
+  font-size: 30px;
+  font-weight: bold;
+}
 .navbar-item{
   text-decoration: none;
   font-size: 30px;

@@ -31,3 +31,8 @@ hr{
    margin-top:-200px;/* half height*/
    box-shadow: 5px 10px;
 }
+
+@font-face{
+  font-family: Shadows;
+  src: url(../Shadows.ttf);
+}
