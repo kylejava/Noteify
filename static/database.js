@@ -12,6 +12,7 @@ function addEntryToJar(){
       newPostRef.set({
           entry:test
       });
+      document.getElementById('confirm').innerHTML = "Note Has Been Added To Jar!"
 
     } else {
       console.log("user is note signed in");

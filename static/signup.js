@@ -10,15 +10,7 @@ function createNewUser() {
   var display = document.getElementById('displayName').value;
   firebase.auth().createUserWithEmailAndPassword(email, password)
   .then((user) => {
-    firebase.database().ref('users/' + user.uid).set({
-      email: user.email,
-      OpenWhenYouFeelLikeYoureNotGoodEnough: ["test"],
-      OpenWhenYoureGoingThroughARoughPatch: ["test"],
-      OpenWhenYouNeedAGoodLaugh: ["test"],
-      OpenWhenYouAreFeelingLonely: ["test"],
-      OpenWhenYouAreFeelingAnxious: ['test']
-    });
-    document.getElementById('note').innerHTML = "Account Has Been Created.";
+    location.href = '/signin'
   })
   .catch((error) => {
     var errorCode = error.code;

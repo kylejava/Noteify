@@ -23,6 +23,26 @@ def profile():
 def submit():
     return render_template('submit.html')
 
+@app.route('/jar-one' , methods = ['GET' , 'POST'])
+def jar1():
+    return render_template('jar1.html')
+
+@app.route('/jar-two' , methods = ['GET' , 'POST'])
+def jar2():
+    return render_template('jar2.html')
+
+@app.route('/jar-three' , methods = ['GET' , 'POST'])
+def jar3():
+    return render_template('jar3.html')
+
+@app.route('/jar-four' , methods = ['GET' , 'POST'])
+def jar4():
+    return render_template('jar4.html')
+
+
+@app.route('/jar-five' , methods = ['GET' , 'POST'])
+def jar5():
+    return render_template('jar5.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
