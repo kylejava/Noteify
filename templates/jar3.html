@@ -30,7 +30,7 @@
       <hr>
     </div>
     <div class="rectangle">
-
+      <p id="note"></p>
     </div>
 
     <!-- Add These To all HTMl Files -->
@@ -40,5 +40,32 @@
     <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-database.js"></script>
     <script src="../static/firebase.js"></script>
     <script src="../static/signin.js"></script>
+    <script type="text/javascript">
+      function getRandomInt(max) {
+          return Math.floor(Math.random() * Math.floor(max));
+        }
+      var database = firebase.database();
+      firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+          console.log(user);
+          console.log(user.uid);
+          var notes = [];
+          var leadsRef = database.ref('/users' + '/' + user.uid+ '/OpenWhenYouNeedAGoodLaugh');
+          leadsRef.on('value', function(snapshot) {
+              snapshot.forEach(function(childSnapshot) {
+                var childData = childSnapshot.val();
+
+                var note = (childData['entry']);
+                notes.push(note);
+
+              });
+              console.log(notes.length);
+              document.getElementById('note').innerHTML = notes[getRandomInt(notes.length)];
+          });
+        } else {
+          console.log("user is note signed in");
+        }
+      });
+    </script>
   </body>
 </html>
