@@ -1,3 +1,16 @@
+@font-face{
+  font-family: Shadows;
+  src: url(../Shadows.ttf);
+}
+@font-face{
+  font-family: Farsan;
+  src: url(../Farsan.ttf);
+}
+
+@font-face{
+  font-family: Roboto;
+  src: url(../Roboto.ttf);
+}
 .navbar-item{
   text-decoration: none;
   font-size: 50px;
@@ -25,11 +38,33 @@ hr{
   background-color: white;
 }
 
-@font-face{
-  font-family: Shadows;
-  src: url(../Shadows.ttf);
-}
-@font-face{
+.note-header{
   font-family: Farsan;
-  src: url(../Farsan.ttf);
+}
+
+.note-context{
+  font-family: Roboto;
+  font-size: 19px;
+}
+
+.column-1{
+  width:400px;
+  height: 400px;
+  background-color: #8d9b6a;
+  box-shadow: 5px 10px;
+  text-family: Farsan;
+}
+.column-2{
+  width:400px;
+  height: 400px;
+  background-color: #8a9ea7;
+  box-shadow: 5px 10px;
+  text-family: Farsan;
+}
+.column-3{
+  width:400px;
+  height: 400px;
+  background-color:#dab692;
+  box-shadow: 5px 10px;
+  text-family: Farsan;
 }
