@@ -74,7 +74,13 @@
         if (user) {
           console.log(user);
           console.log(user.uid);
-
+          console.log(user.email);
+          var postData = {
+            email:user.email,
+          };
+          var updates = {};
+          updates['/users/' + user.uid +'/userinformation'] = postData;
+          return firebase.database().ref().update(updates);
         } else {
           console.log("user is note signed in");
         }
