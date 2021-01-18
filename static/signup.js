@@ -17,6 +17,7 @@ function createNewUser() {
     var errorMessage = error.message;
     // ..
     console.log(errorMessage);
+    document.getElementById('error').innerHTML = errorMessage;
   //  console.log(user.isEmailVerified());
   });
 }

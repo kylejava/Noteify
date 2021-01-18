@@ -21,3 +21,15 @@ function addEntryToJar(){
 
   });
 }
+
+function checkIfUserSignedIn(){
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      console.log(user);
+      console.log(user.uid);
+      console.log(user.email);
+    } else {
+      location.href = "/signin";
+    }
+  });
+}

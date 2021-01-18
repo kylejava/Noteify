@@ -82,7 +82,7 @@
           updates['/users/' + user.uid +'/userinformation'] = postData;
           return firebase.database().ref().update(updates);
         } else {
-          console.log("user is note signed in");
+          location.href = "/signin";
         }
       });
     </script>
