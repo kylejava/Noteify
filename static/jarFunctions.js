@@ -25,7 +25,7 @@ function getNewNote(jar){
             document.getElementById('note').innerHTML = newNote;
           }
           else{
-            while(newNote != currentNote){
+            while(newNote == currentNote){
               newNote = notes[getRandomInt(notes.length)];
               console.log("New Note: " + newNote);
               console.log("Old Note: " + currentNote);
