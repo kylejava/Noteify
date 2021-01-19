@@ -72,9 +72,6 @@
     <script type="text/javascript">
       firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
-          console.log(user);
-          console.log(user.uid);
-          console.log(user.email);
           var postData = {
             email:user.email,
           };
