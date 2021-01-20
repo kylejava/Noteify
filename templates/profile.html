@@ -31,6 +31,9 @@
     </div>
     <div class="container py-5 ps-5">
       <div class="row">
+        <button type="submit" name="button" value="SIgn out" onclick="signOut()"></button>
+      </div>
+      <div class="row">
         <div class="col">
           <a href="/submit" style="color:black;">
             <div class="entry">
@@ -82,6 +85,14 @@
           location.href = "/signin";
         }
       });
+      function signOut() {
+        firebase.auth().signOut().then(() => {
+        // Sign-out successful.
+          location.href = '/';
+        }).catch((error) => {
+          // An error happened.
+        });
+      }
     </script>
   </body>
 </html>
