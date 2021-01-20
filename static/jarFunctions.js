@@ -1,3 +1,7 @@
+function goBackToMainPage(){
+  location.href = "/profile";
+}
+
 /*
 Function Name: getNewNote()
 Parameters: None
