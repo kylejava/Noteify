@@ -25,7 +25,10 @@ function getNewNote(jar){
             notes.push(note);
           });
           var newNote = notes[getRandomInt(notes.length)];
-          if(notes.length == 1){
+          if(notes.length == 0){
+            document.getElementById('note').innerHTML = "There are no notes in this jar.";
+          }
+          else if(notes.length == 1){
             document.getElementById('note').innerHTML = newNote;
           }
           else{
