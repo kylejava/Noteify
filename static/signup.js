@@ -11,10 +11,11 @@ function createNewUser() {
   var email = document.getElementById('email').value;
   var password = document.getElementById('password').value;
   var display = document.getElementById('displayName').value;
+  var ageVerification = document.getElementById('ageVerification');
   firebase.auth().createUserWithEmailAndPassword(email, password)
   .then((user) => {
     firebase.auth().onAuthStateChanged(function(user) {
-        if (user) {
+        if (user && ageVerification.checked == true) {
           user.sendEmailVerification().then(function() {
             // Email sent.
             location.href = "/signin";
