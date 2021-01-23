@@ -7,30 +7,26 @@
     <title>Note.ify</title>
   </head>
   <body style="background-color: #e8dfe0;">
-    <div class="container">
-      <header class="blog-header py-3">
-        <div class="row flex-nowrap justify-content-between align-items-center">
-          <div class="col-2 pt-1">
-            <a class="navbar-item" href="/">Home</a>
-          </div>
-          <div class="col-2 pt-1">
-            <a class="navbar-item" href="/signin">Sign In</a>
-          </div>
-          <div class="col-4 text-center">
-            <a class="navbar-header" href="/">Noteify</a>
-          </div>
-          <div class="col-2 d-flex justify-content-end align-items-center">
-            <a class="navbar-item" href="/">About</a>
-          </div>
-          <div class="col-2 d-flex justify-content-end align-items-center">
-            <a class="navbar-item" href="/">Contact Us</a>
-          </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-header" href="/">Noteify</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          </ul>
+          <span class="navbar-text">
+            <a class="navbar-item px-3" href="/">Home</a>
+            <a class="navbar-item px-3" href="/profile">My Profile</a>
+            <a class="navbar-item px-3" href="/signup">Sign Up</a>
+            <a class="navbar-item px-3" href="/">About</a>
+          </span>
         </div>
-      </header>
-      <hr>
-    </div>
+      </div>
+    </nav>
     <div class="rectangle">
-      <div class="container py-5 text-center">
+      <div class="container py-1 text-center">
         <h1 style="font-family: Shadows; font-weight:bold;">Register</h1>
         <div class="py-2">
           <input type="text" id="displayName"placeholder="First & Last Name" class="form-control" >
@@ -40,6 +36,10 @@
         </div>
         <div class="py-2">
           <input type="password" id = "password" placeholder="Password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <div class="py-2">
+          <input type="checkbox" id="ageVerification" name="ageVerification" >
+          <label for="ageVerification"> I am over 13 years old or older.</label><br>
         </div>
         <input type="submit" onclick="createNewUser()"value="Sign Up!">
         <p id= "note"></p>
@@ -52,6 +52,7 @@
     </div>
 
     <!-- Add These To all HTMl Files -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-auth.js"></script>

@@ -10,25 +10,25 @@
 
 .navbar-item{
   text-decoration: none;
-  font-size: 50px;
-  color: white;
+  font-size: 30px;
+  color: black;
   text-shadow: 1px 1px #3b3c3f;
   font-family: Farsan;
 }
 .navbar-item:hover{
-color: black;
+color: #e8dfe0;
 }
 .navbar-header{
   text-decoration: none;
-  font-size: 60px;
-  color: white;
+  font-size: 35px;
+  color: black;
   font-weight: bold;
   text-shadow: 1px 1px #3b3c3f;
     font-family: Farsan;
 }
 
 .navbar-header:hover{
-  color: black;
+  color:#e8dfe0;
 }
 
 
