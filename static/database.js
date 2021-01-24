@@ -14,7 +14,7 @@ function addEntryToJar(){
       });
       document.getElementById('note').value = '';
       document.getElementById('confirm').innerHTML = "Note Has Been Added To Jar!"
-
+      
     } else {
       console.log("user is note signed in");
     }

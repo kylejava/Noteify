@@ -18,6 +18,7 @@ function createNewUser() {
         if (user && ageVerification.checked == true) {
           user.sendEmailVerification().then(function() {
             // Email sent.
+            user.displayName = display;
             location.href = "/signin";
           }).catch(function(error) {
             // An error happened.

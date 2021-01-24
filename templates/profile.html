@@ -39,24 +39,24 @@
           </a>
         </div>
         <div class="col ">
-          <a href="/jar-one"><img src="../static/image1.png" alt=""></a>
+          <a class="pt-3"href="/jar-one"><img src="../static/image1.png" alt=""></a>
         </div>
         <div class="col">
-          <a href="/jar-two"><img src="../static/image2.png" alt=""></a>
+          <a class="pt-3" href="/jar-two"><img src="../static/image2.png" alt=""></a>
 
         </div>
       </div>
       <div class="row pt-3">
         <div class="col">
-          <a href="/jar-three"><img src="../static/image3.png" alt=""></a>
+          <a class="pt-3" href="/jar-three"><img src="../static/image3.png" alt=""></a>
 
         </div>
         <div class="col">
-          <a href="/jar-four"><img src="../static/image4.png" alt=""></a>
+          <a class="pt-3" href="/jar-four"><img src="../static/image4.png" alt=""></a>
 
         </div >
         <div class="col">
-          <a href="/jar-five"><img src="../static/image5.png" alt=""></a>
+          <a class="pt-3" href="/jar-five"><img src="../static/image5.png" alt=""></a>
         </div>
       </div>
     </div>
@@ -71,6 +71,7 @@
     <script type="text/javascript">
       firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
+          console.log(user);
           var postData = {
             email:user.email,
           };
