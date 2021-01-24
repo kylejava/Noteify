@@ -53,6 +53,7 @@ hr{
   background-color: #8d9b6a;
   box-shadow: 5px 10px;
   text-family: Farsan;
+  margin: auto;
 }
 .column-2{
   width:400px;
@@ -60,6 +61,7 @@ hr{
   background-color: #8a9ea7;
   box-shadow: 5px 10px;
   text-family: Farsan;
+  margin: auto;
 }
 .column-3{
   width:400px;
@@ -67,4 +69,5 @@ hr{
   background-color:#dab692;
   box-shadow: 5px 10px;
   text-family: Farsan;
+  margin: auto;
 }

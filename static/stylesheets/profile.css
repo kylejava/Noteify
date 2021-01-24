@@ -44,12 +44,17 @@ hr{
   background-color: #f7f794;
   border-radius: 20px;
   box-shadow: 5px 10px;
+  margin: auto;
 
 }
 
 .content{
   display: inline-block;
  width: 200px; height: 200px;
+}
+
+a{
+  margin: auto;
 }
 
 img:hover{
