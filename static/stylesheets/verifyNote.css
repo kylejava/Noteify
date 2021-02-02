@@ -1,0 +1,55 @@
+@font-face{
+  font-family: Shadows;
+  src: url(../Shadows.ttf);
+}
+
+@font-face{
+  font-family: Farsan;
+  src: url(../Farsan.ttf);
+}
+
+.navbar-item{
+  text-decoration: none;
+  font-size: 30px;
+  color: black;
+  text-shadow: 1px 1px #3b3c3f;
+  font-family: Farsan;
+}
+.navbar-item:hover{
+color: #e8dfe0;
+}
+.navbar-header{
+  text-decoration: none;
+  font-size: 35px;
+  color: black;
+  font-weight: bold;
+  text-shadow: 1px 1px #3b3c3f;
+    font-family: Farsan;
+}
+
+.navbar-header:hover{
+  color:#e8dfe0;
+}
+
+
+hr{
+  background-color: white;
+}
+
+.rectangle{
+  width: 400px;
+   height: 400px;
+   background-color: #f7f794;
+   position:absolute;
+   top:50%;
+   left:50%;
+   margin-left:-200px;/* half width*/
+   margin-top:-200px;/* half height*/
+   box-shadow: 5px 10px;
+}
+
+#note{
+  font-family: Shadows;
+  font-size: 30px;
+  font-weight: bold;
+}

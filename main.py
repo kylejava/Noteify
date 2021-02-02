@@ -44,5 +44,18 @@ def jar4():
 def jar5():
     return render_template('jar5.html')
 
+@app.route('/sendNote' , methods = ['GET' , 'POST'])
+def sendNote():
+    return render_template('sendNote.html')
+
+@app.route('/verifyNote' , methods = ['GET' , 'POST'])
+def verifyNote():
+    note = ""
+    if request.method == 'POST':
+        note = request.form['note']
+        print(note)
+        return render_template('verifyNote.html' , note = note)
+    return render_template('verifyNote.html' , note = note)
+
 if __name__ == "__main__":
     app.run(debug=True)
