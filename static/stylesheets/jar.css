@@ -1,11 +1,11 @@
 @font-face{
   font-family: Shadows;
-  src: url(../Shadows.ttf);
+  src: url(../fonts/Shadows.ttf);
 }
 
 @font-face{
   font-family: Farsan;
-  src: url(../Farsan.ttf);
+  src: url(../fonts/Farsan.ttf);
 }
 
 #note{
