@@ -1,7 +1,4 @@
-function goBackToMainPage(){
-  location.href = "/profile";
-}
-
+//This file has to do with the submitting of notes to various jars
 /*
 Function Name: getNewNote()
 Parameters: None

@@ -1,4 +1,7 @@
 var database = firebase.database();
+
+//This file is responsible for adding new notes to jars, only use for database functions
+
 function addEntryToJar(){
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
@@ -14,22 +17,10 @@ function addEntryToJar(){
       });
       document.getElementById('note').value = '';
       document.getElementById('confirm').innerHTML = "Note Has Been Added To Jar!"
-      
+
     } else {
       console.log("user is note signed in");
     }
 
-  });
-}
-
-function checkIfUserSignedIn(){
-  firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-      console.log(user);
-      console.log(user.uid);
-      console.log(user.email);
-    } else {
-      location.href = "/signin";
-    }
   });
 }

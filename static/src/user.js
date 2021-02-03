@@ -7,3 +7,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     location.href = "/signin";
   }
 });
+
+function goBackToMainPage(){
+  location.href = "/profile";
+}

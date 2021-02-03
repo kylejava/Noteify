@@ -1,3 +1,5 @@
+//This file is for the sending of notes between users
+
 var nodemailer = require('nodemailer');
 var transporter = nodemailer.createTransport({
   service: 'gmail'
